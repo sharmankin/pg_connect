@@ -1,0 +1,33 @@
+[project]
+name = "pg3_connect"
+description = "Preconfigured psycopg3 connections"
+version = "0.0.0"
+
+requires-python = ">= 3.10"
+classifiers = [
+    "Development Status :: 0 - Pre Alpha",
+    "Programming Language :: Python"
+]
+
+dependencies = [
+    "psycopg[pool,binary]",
+    "python-dotenv",
+    "config_reader @ git+https://github.com/sharmankin/config_reader#egg=latest_stable"
+]
+
+
+[build-system]
+requires = [
+    "setuptools @ git+https://github.com/pypa/setuptools",
+    "cython >= 0.29.33",
+    "wheel >= 0.40"
+]
+build-backend = "setuptools.build_meta"
+
+#[project.scripts]
+#    run_init = "pg3.init:set_env"
+
+#[tool.setuptools.package-data]
+#vehicle_photo_service = [
+#    "*.h5", "*.txt"
+#]
