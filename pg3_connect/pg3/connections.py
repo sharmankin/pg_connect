@@ -61,7 +61,6 @@ def get_async_pool(
     )
 
 
-@lru_cache()
 def connect(
         *,
         autocommit: bool = False,
@@ -79,3 +78,10 @@ def connect(
         cursor_factory=cursor_factory,
         context=context
     )
+
+
+__all__ = [
+    'connect',
+    'get_pool',
+    'get_async_pool'
+]

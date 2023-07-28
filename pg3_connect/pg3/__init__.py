@@ -1,5 +1,6 @@
-import dotenv
+import dotenv as _de
+from .connections import *
 
-dotenv.load_dotenv(
-    dotenv.find_dotenv('project.env', raise_error_if_not_found=True)
+_de.load_dotenv(
+    _de.find_dotenv('project.env', raise_error_if_not_found=True)
 )
