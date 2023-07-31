@@ -4,9 +4,14 @@ import dotenv as _de
 from .connections import *
 from .extras import *
 import os
+from config_reader import project_root
+
+p_env = project_root / 'project.env'
+
+assert p_env.exists()
 
 _de.load_dotenv(
-    _de.find_dotenv('project.env', raise_error_if_not_found=True)
+    p_env
 )
 
 if not os.getenv('PG_NODE'):
